@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChartJS Stacked Bar Chart</title>
+</head>
+<body>
+
+	<div style="width: 50%;  height: 600px; margin-left: auto; margin-right: auto;">
+		<canvas id = "myChart">
+	</div>
+	
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["MP", "APP", "JEP", "HR", "JASA"],
+    datasets: [{
+        label: 'Undefined',
+        data: [32.98, 53.33, 36.09, 35.56, 27.11],
+        backgroundColor: [
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+        ],
+        borderColor: [
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+        ],
+        borderWidth: 1
+      },
+      {
+        label: 'Flat',
+        data: [28.19, 29.73, 39.26, 38.85, 51.09],
+        backgroundColor: [
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+        ],
+        borderColor: [
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+        ],
+        borderWidth: 1
+      },
+
+      {
+        label: 'Click/Click Train',
+        data: [1.65, 5.73, 0.91, 19.96, 7.83],
+        backgroundColor: [
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+        ],
+        borderColor: [
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+        ],
+        borderWidth: 1
+      },
+
+      {
+        label: 'Other',
+        data: [8.94, 6.90, 9.08, 5.62, 13.54],
+        backgroundColor: [
+          '#41F000',
+          '#41F000',
+          '#41F000',
+          '#41F000',
+          '#41F000',
+ 
+        ],
+        borderColor: [
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+        ],
+        borderWidth: 1
+      },
+
+      {
+        label: 'Percussive',
+        data: [28.10, 4.31, 14.67, 0, 0.43],
+        backgroundColor: [
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+        ],
+        borderColor: [
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+          '#000000',
+        ],
+        borderWidth: 1
+      },
+    ]
+  },
+  options: {
+
+    scales: {
+      yAxes: [{
+
+        stacked: true,
+        ticks: {
+          beginAtZero: true
+        }
+
+      }],
+      xAxes: [{
+        stacked: true,
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+
+    }
+
+  }
+});
+
+</script>
+
+</body>
+</html>
