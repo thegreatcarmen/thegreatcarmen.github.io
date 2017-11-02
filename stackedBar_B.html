@@ -122,14 +122,20 @@ var myChart = new Chart(ctx, {
 
     scales: {
       yAxes: [{
-
+      	scaleLabel: {
+      		display: true,
+      		labelString: 'Proportion of Stimuli'
+      	},
         stacked: true,
         ticks: {
           beginAtZero: true
         }
-
       }],
       xAxes: [{
+      	scaleLabel: {
+      		display: true,
+      		labelString: 'Journal'
+      	},
         stacked: true,
         ticks: {
           beginAtZero: true
