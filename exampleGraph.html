@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChartJS Example</title>
+</head>
+<body>
+
+	<div style="width: 50%;  height: 600px; margin-left: auto; margin-right: auto;">
+		<canvas id = "myChart">
+	</div>
+	
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js"></script>
+
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ["Journal A", "Journal B", "Journal C", "Journal D", "Journal E"],
+    datasets: [{
+        label: 'Tone 1',
+        data: [10, 30, 50, 10, 60],
+        backgroundColor: [
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+        ],
+        borderColor: [
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+          '#7A00F0',
+        ],
+        borderWidth: 2
+      },
+      {
+        label: 'Tone 2',
+        data: [20, 10, 10, 25, 5],
+        backgroundColor: [
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+        ],
+        borderColor: [
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+          '#00F0E6',
+        ],
+        borderWidth: 2
+      },
+
+      {
+        label: 'Tone 3',
+        data: [45, 30, 5, 15, 10],
+        backgroundColor: [
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+        ],
+        borderColor: [
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+          '#E3F000',
+        ],
+        borderWidth: 2
+      },
+
+      {
+        label: 'Tone 4',
+        data: [5, 10, 20, 25, 15],
+        backgroundColor: [
+          '#41F000',
+          '#41F000',
+          '#41F000',
+          '#41F000',
+          '#41F000',
+ 
+        ],
+        borderColor: [
+          '#41F000',
+          '#41F000',
+          '#41F000',
+          '#41F000',
+          '#41F000',
+        ],
+        borderWidth: 2
+      },
+
+      {
+        label: 'Tone 5',
+        data: [20, 20, 15, 25, 10],
+        backgroundColor: [
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+        ],
+        borderColor: [
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+          '#FF79E1',
+        ],
+        borderWidth: 2
+      },
+    ]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+      	scaleLabel: {
+      		display: true,
+      		labelString: 'Proportion of Stimuli'
+      	},
+        stacked: true,
+        ticks: {
+          max: 100,
+          min: 0
+        }
+      }],
+      xAxes: [{
+      	scaleLabel: {
+      		display: true,
+      		labelString: 'Journal Name'
+      	},
+        stacked: true,
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+
+    }
+  }
+});
+
+</script>
+
+</body>
+</html>
